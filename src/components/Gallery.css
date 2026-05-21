@@ -10,7 +10,6 @@
   width: 100%;
   display: block;
   max-height: 520px;
-  object-fit: cover;
 }
 .gallery__note { text-align: center; font-size: 0.9rem; color: var(--muted); }
 .gallery__note a { color: var(--steel); font-weight: 500; }

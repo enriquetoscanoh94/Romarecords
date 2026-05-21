@@ -23,15 +23,14 @@
   gap: 1.5rem;
 }
 .navbar__brand {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--text);
   flex-shrink: 0;
-  transition: color var(--ease);
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  transition: opacity var(--ease);
 }
-.navbar__brand:hover { color: var(--steel); }
+.navbar__brand:hover { opacity: 1; }
+.navbar__logo { height: 36px; width: auto; }
 
 .navbar__controls {
   display: flex;

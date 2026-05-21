@@ -16,6 +16,7 @@ export function AppProvider({ children }) {
   }, [dark])
 
   useEffect(() => {
+    document.documentElement.lang = lang
     localStorage.setItem('lang', lang)
   }, [lang])
 

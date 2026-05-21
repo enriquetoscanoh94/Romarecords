@@ -1,7 +1,6 @@
 export const PHONE = '12097746182'
 
 export const CONTACT = {
-  displayPhone: '(209) 774-6182',
   whatsapp: `https://wa.me/${PHONE}`,
   call: `tel:+${PHONE}`,
   sms: `sms:+${PHONE}`,

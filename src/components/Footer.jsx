@@ -29,7 +29,7 @@ export default function Footer() {
             <p className="footer__social-title">{t.connect}</p>
             <a href={CONTACT.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a href={CONTACT.call}>Phone</a>
+            <a href={CONTACT.call}>{t.phone}</a>
           </div>
         </div>
 

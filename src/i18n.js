@@ -68,6 +68,7 @@ export const T = {
       tagline: 'Live Recording · Northern California · Bay Area',
       pages: 'Pages',
       connect: 'Connect',
+      phone: 'Phone',
       copyright: 'All rights reserved.',
     },
     card: {
@@ -144,7 +145,7 @@ export const T = {
       subtitle: '¿Listo para grabar? Comunícate y te respondemos rápido.',
       channels: {
         call:      { label: 'Llámanos',   value: '(209) 774-6182'   },
-        text:      { label: 'Escríbenos', value: 'Envía un mensaje'  },
+        text:      { label: 'Escríbenos', value: 'Enviar SMS'         },
         whatsapp:  { label: 'WhatsApp',   value: 'Envía un mensaje'  },
         instagram: { label: 'Instagram',  value: '@estudios_roma'   },
       },
@@ -153,6 +154,7 @@ export const T = {
       tagline: 'Grabaciones en Vivo · Norte de California · La Bahía',
       pages: 'Páginas',
       connect: 'Conecta',
+      phone: 'Teléfono',
       copyright: 'Todos los derechos reservados.',
     },
     card: {

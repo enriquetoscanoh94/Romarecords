@@ -7,6 +7,7 @@ import './Hero.css'
 export default function Hero() {
   const { lang } = useApp()
   const t = T[lang].hero
+  const cta = T[lang].nav.cta
 
   return (
     <section id="hero" className="hero">
@@ -21,7 +22,7 @@ export default function Hero() {
           <span>{t.location}</span>
         </p>
         <div className="hero__actions">
-          <a href={CONTACT.call} className="btn btn-primary">{T[lang].nav.cta}</a>
+          <a href={CONTACT.call} className="btn btn-primary">{cta}</a>
           <a href={CONTACT.whatsapp} className="btn btn-outline" target="_blank" rel="noopener noreferrer">
             <WhatsAppIcon size={17} />
             WhatsApp

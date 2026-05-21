@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
         <a href="#hero" className="navbar__brand" onClick={() => setOpen(false)}>
-          Roma Records
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Estudios Roma" className="navbar__logo logo-main" />
         </a>
 
         <ul className={`navbar__links${open ? ' navbar__links--open' : ''}`}>

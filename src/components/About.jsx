@@ -20,7 +20,7 @@ export default function About() {
 
         <div className="about__visual">
           <div className="about__photo-wrap">
-            <img src={`${import.meta.env.BASE_URL}imagen.jpeg`} alt="Estudios Roma" className="about__photo" />
+            <img src={`${import.meta.env.BASE_URL}imagen.jpeg`} alt="Estudios Roma recording session" className="about__photo" loading="lazy" />
           </div>
           <div className="about__badge">
             <span>{t.location[0]}</span>
