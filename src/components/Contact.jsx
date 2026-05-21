@@ -5,10 +5,11 @@ import { CallIcon, TextIcon, WhatsAppIcon, InstagramIcon, ArrowIcon } from './ic
 import './Contact.css'
 
 const CHANNELS = [
-  { id: 'call',      href: CONTACT.call,      Icon: CallIcon,      external: false },
-  { id: 'text',      href: CONTACT.sms,       Icon: TextIcon,      external: false },
-  { id: 'whatsapp',  href: CONTACT.whatsapp,  Icon: WhatsAppIcon,  external: true  },
-  { id: 'instagram', href: CONTACT.instagram, Icon: InstagramIcon, external: true  },
+  { id: 'call',              href: CONTACT.call,             Icon: CallIcon,      external: false },
+  { id: 'text',              href: CONTACT.sms,              Icon: TextIcon,      external: false },
+  { id: 'whatsapp',          href: CONTACT.whatsapp,         Icon: WhatsAppIcon,  external: true  },
+  { id: 'instagram',         href: CONTACT.instagram,        Icon: InstagramIcon, external: true  },
+  { id: 'instagramPersonal', href: CONTACT.instagramPersonal,Icon: InstagramIcon, external: true  },
 ]
 
 export default function Contact() {
