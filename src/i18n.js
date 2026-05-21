@@ -61,8 +61,7 @@ export const T = {
         call:      { label: 'Call Us',   value: '(209) 774-6182'  },
         text:      { label: 'Text Us',   value: 'Send a text'     },
         whatsapp:  { label: 'WhatsApp',  value: 'Send a message'  },
-        instagram:         { label: 'Instagram',          value: '@estudios_roma' },
-        instagramPersonal: { label: 'Personal Instagram',  value: '@naza.wav'      },
+        instagram: { label: 'Instagram', value: '@estudios_roma' },
       },
     },
     footer: {
@@ -148,8 +147,7 @@ export const T = {
         call:      { label: 'Llámanos',   value: '(209) 774-6182'   },
         text:      { label: 'Escríbenos', value: 'Enviar SMS'         },
         whatsapp:  { label: 'WhatsApp',   value: 'Envía un mensaje'  },
-        instagram:         { label: 'Instagram',          value: '@estudios_roma' },
-        instagramPersonal: { label: 'Instagram Personal', value: '@naza.wav'      },
+        instagram: { label: 'Instagram', value: '@estudios_roma' },
       },
     },
     footer: {
