@@ -1,0 +1,17 @@
+.gallery__video-item {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--dark);
+  margin-bottom: 2rem;
+}
+.gallery__video-item video {
+  width: 100%;
+  display: block;
+  max-height: 520px;
+  object-fit: cover;
+}
+.gallery__note { text-align: center; font-size: 0.9rem; color: var(--muted); }
+.gallery__note a { color: var(--steel); font-weight: 500; }
+.gallery__note a:hover { text-decoration: underline; }

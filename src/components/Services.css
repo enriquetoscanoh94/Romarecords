@@ -1,0 +1,30 @@
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+}
+.service-card {
+  background: var(--white);
+  padding: 3rem 2.5rem;
+  position: relative;
+  transition: box-shadow var(--ease-slow), background var(--ease-slow);
+}
+.service-card__bar {
+  position: absolute;
+  bottom: 0;
+  left: 2.5rem;
+  right: 2.5rem;
+  height: 2px;
+  background: var(--steel);
+  transform: scaleX(0);
+  transition: transform var(--ease-slow);
+  transform-origin: left;
+}
+.service-card:hover { box-shadow: var(--shadow); z-index: 1; }
+.service-card:hover .service-card__bar { transform: scaleX(1); }
+.service-card__icon { color: var(--steel); margin-bottom: 1.75rem; }
+.service-card__title { font-size: 1.35rem; margin-bottom: 0.75rem; }
+.service-card__desc { font-size: 0.925rem; color: var(--muted); line-height: 1.8; }
+
+@media (max-width: 768px) { .services__grid { grid-template-columns: 1fr; } }
