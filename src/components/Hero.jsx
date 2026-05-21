@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section id="hero" className="hero">
       <div className="hero__inner">
-        <img src="/logo.png" alt="Estudios Roma" className="hero__logo logo-main" />
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Estudios Roma" className="hero__logo logo-main" />
         <div className="hero__divider" />
         <h1 className="hero__title">
           {t.title[0]}<br />{t.title[1]}

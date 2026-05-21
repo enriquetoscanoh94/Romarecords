@@ -64,7 +64,7 @@ export default function CardPage() {
 
       <div className="card-body">
         <a href="https://romarecords.llc" target="_blank" rel="noopener noreferrer" className="card-logo-wrap">
-          <img src="/logo.png" alt="Estudios Roma" className="card-logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Estudios Roma" className="card-logo" />
         </a>
 
         <div className="card-identity">

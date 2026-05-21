@@ -33,7 +33,7 @@ export default function Gallery() {
         <div className="gallery__video-item">
           <video
             ref={videoRef}
-            src="/presentacion.mp4"
+            src={`${import.meta.env.BASE_URL}presentacion.mp4`}
             controls
             preload="metadata"
             onLoadedMetadata={handleLoadedMetadata}

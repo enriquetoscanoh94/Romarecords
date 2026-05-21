@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
-            <img src="/logo.png" alt="Estudios Roma" className="logo-footer" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Estudios Roma" className="logo-footer" />
             <p className="footer__tagline">{t.tagline}</p>
           </div>
 
