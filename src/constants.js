@@ -6,6 +6,7 @@ export const CONTACT = {
   call: `tel:+${PHONE}`,
   sms: `sms:+${PHONE}`,
   instagram: 'https://www.instagram.com/estudios_roma/',
+  instagramPersonal: 'https://www.instagram.com/naza.wav/',
 }
 
 export const NAV_LINKS = [

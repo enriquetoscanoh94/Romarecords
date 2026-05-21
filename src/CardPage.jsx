@@ -30,10 +30,11 @@ function downloadVCard() {
 }
 
 const ACTIONS = [
-  { id: 'call',      href: CONTACT.call,      Icon: CallIcon,      external: false, value: null             },
-  { id: 'text',      href: CONTACT.sms,       Icon: TextIcon,      external: false, value: null             },
-  { id: 'whatsapp',  href: CONTACT.whatsapp,  Icon: WhatsAppIcon,  external: true,  value: null             },
-  { id: 'ig-studio', href: CONTACT.instagram, Icon: InstagramIcon, external: true,  value: '@estudios_roma' },
+  { id: 'call',        href: CONTACT.call,             Icon: CallIcon,      external: false, value: null             },
+  { id: 'text',        href: CONTACT.sms,              Icon: TextIcon,      external: false, value: null             },
+  { id: 'whatsapp',    href: CONTACT.whatsapp,         Icon: WhatsAppIcon,  external: true,  value: null             },
+  { id: 'ig-personal', href: CONTACT.instagramPersonal,Icon: InstagramIcon, external: true,  value: '@naza.wav'      },
+  { id: 'ig-studio',   href: CONTACT.instagram,        Icon: InstagramIcon, external: true,  value: '@estudios_roma' },
 ]
 
 export default function CardPage() {
@@ -43,6 +44,7 @@ export default function CardPage() {
 
   const actionLabels = {
     call: t.call, text: t.text, whatsapp: t.whatsapp,
+    'ig-personal': t.instagramPersonal,
     'ig-studio': t.instagram,
   }
 
