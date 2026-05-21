@@ -30,7 +30,7 @@
   transition: opacity var(--ease);
 }
 .navbar__brand:hover { opacity: 1; }
-.navbar__logo { height: 36px; width: auto; }
+.navbar__logo { height: 48px; width: auto; }
 
 .navbar__controls {
   display: flex;
