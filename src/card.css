@@ -1,9 +1,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #dedad6;
-  --bg2: #f0ece6;
-  --border: #e0dcd8;
+  --bg: #ffffff;
+  --bg2: #f8f8f6;
+  --border: #e4e4e0;
   --text: #1a1a18;
   --muted: #767672;
   --steel: #4a7a9b;
@@ -11,18 +11,6 @@
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'Inter', system-ui, sans-serif;
   --ease: 200ms ease;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1c1b1a;
-    --bg2: #252422;
-    --border: rgba(255, 255, 255, 0.08);
-    --text: #f0f0ec;
-    --muted: rgba(255, 255, 255, 0.45);
-    --steel: #6a9bbf;
-    --steel-dim: rgba(106, 155, 191, 0.15);
-  }
 }
 
 html, body, #root {
@@ -53,7 +41,7 @@ body {
   position: fixed;
   top: 1.25rem;
   right: 1.25rem;
-  background: rgba(255, 255, 255, 0.06);
+  background: transparent;
   border: 1px solid var(--border);
   color: var(--muted);
   font-family: var(--sans);
@@ -66,7 +54,7 @@ body {
   transition: var(--ease);
   z-index: 10;
 }
-.card-lang:hover { color: var(--text); background: rgba(255, 255, 255, 0.1); }
+.card-lang:hover { color: var(--text); border-color: var(--text); }
 
 /* ===== BODY ===== */
 .card-body {
@@ -93,12 +81,6 @@ body {
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.18));
-}
-
-@media (prefers-color-scheme: dark) {
-  .card-logo {
-    filter: invert(1) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.08));
-  }
 }
 
 /* ===== IDENTITY ===== */
