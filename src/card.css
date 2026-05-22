@@ -1,35 +1,12 @@
+@import './tokens.css';
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-  --bg: #ffffff;
-  --bg2: #f8f8f6;
-  --border: #e4e4e0;
-  --text: #1a1a18;
-  --muted: #767672;
-  --steel: #4a7a9b;
-  --steel-dim: rgba(74, 122, 155, 0.1);
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'Inter', system-ui, sans-serif;
-  --ease: 200ms ease;
-}
-
-[data-theme="dark"] {
-  --bg: #1c1b1a;
-  --bg2: #252422;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #f0f0ec;
-  --muted: rgba(255, 255, 255, 0.45);
-  --steel: #6a9bbf;
-  --steel-dim: rgba(106, 155, 191, 0.15);
-}
-
-html, body, #root {
-  height: 100%;
-}
+html, body, #root { height: 100%; }
 
 body {
   font-family: var(--sans);
-  background: var(--bg);
+  background: var(--white);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,8 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem 1.25rem 3rem;
-  position: relative;
-  background: var(--bg);
+  background: var(--white);
 }
 
 /* ===== CONTROLS (lang + theme) ===== */
@@ -159,7 +135,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.25rem;
-  background: var(--bg2);
+  background: var(--off-white);
   border: 1px solid var(--border);
   border-radius: 4px;
   cursor: pointer;
@@ -238,7 +214,7 @@ body {
   transition: var(--ease);
 }
 
-.card-save:hover { background: #5a8aaa; }
+.card-save:hover { opacity: 0.85; }
 
 .card-save--done {
   background: #3a7a5a;
@@ -256,9 +232,9 @@ body {
   text-transform: uppercase;
 }
 
-.card-nfc { color: rgba(106, 155, 191, 0.5); display: flex; }
+.card-nfc { color: var(--steel); opacity: 0.5; display: flex; }
 
-/* ===== MOBILE OPTIMIZATIONS ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 400px) {
   .card-logo-wrap { width: 130px; height: 130px; }
   .card-name { font-size: 1.75rem; }

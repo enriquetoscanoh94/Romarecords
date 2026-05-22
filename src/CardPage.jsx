@@ -41,12 +41,17 @@ const ACTIONS = [
 export default function CardPage() {
   const [lang, setLang] = useState('en')
   const [saved, setSaved] = useState(false)
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
   const t = T[lang].card
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
+    localStorage.setItem('theme', dark ? 'dark' : 'light')
   }, [dark])
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
 
   const actionLabels = {
     call: t.call, text: t.text, whatsapp: t.whatsapp,

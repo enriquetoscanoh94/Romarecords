@@ -21,6 +21,7 @@ export default function Services() {
         <div className="services__grid">
           {t.items.map(({ icon, title, description }) => {
             const Icon = ICONS[icon]
+            if (!Icon) return null
             return (
               <div key={icon} className="service-card">
                 <div className="service-card__icon"><Icon /></div>

@@ -3,11 +3,12 @@ import { T } from '../i18n'
 import { CONTACT, NAV_LINKS } from '../constants'
 import './Footer.css'
 
+const YEAR = new Date().getFullYear()
+
 export default function Footer() {
   const { lang } = useApp()
   const t = T[lang].footer
   const nav = T[lang].nav
-  const year = new Date().getFullYear()
 
   return (
     <footer className="footer">
@@ -34,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <p>© {year} Estudios Roma. {t.copyright}</p>
+          <p>© {YEAR} Estudios Roma. {t.copyright}</p>
         </div>
       </div>
     </footer>

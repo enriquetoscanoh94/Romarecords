@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import { useApp } from '../context/AppContext'
 import { T } from '../i18n'
 import { CONTACT } from '../constants'
@@ -7,19 +6,6 @@ import './Gallery.css'
 export default function Gallery() {
   const { lang } = useApp()
   const t = T[lang].gallery
-  const videoRef = useRef(null)
-  const hasPlayed = useRef(false)
-
-  const handleLoadedMetadata = () => {
-    if (videoRef.current) videoRef.current.currentTime = 2
-  }
-
-  const handlePlay = () => {
-    if (!hasPlayed.current && videoRef.current) {
-      hasPlayed.current = true
-      videoRef.current.currentTime = 0
-    }
-  }
 
   return (
     <section id="gallery" className="section section--gray">
@@ -32,12 +18,9 @@ export default function Gallery() {
 
         <div className="gallery__video-item">
           <video
-            ref={videoRef}
             src={`${import.meta.env.BASE_URL}presentacion.mp4`}
             controls
             preload="metadata"
-            onLoadedMetadata={handleLoadedMetadata}
-            onPlay={handlePlay}
           />
         </div>
 

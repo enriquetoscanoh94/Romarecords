@@ -8,14 +8,11 @@
   transition: padding var(--ease-slow), background var(--ease-slow), box-shadow var(--ease-slow);
 }
 .navbar--scrolled {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(var(--bg-rgb), 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 var(--border);
   padding: 1rem 0;
-}
-[data-theme="dark"] .navbar--scrolled {
-  background: rgba(19, 19, 18, 0.96);
 }
 .navbar__inner {
   display: flex;

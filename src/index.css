@@ -1,36 +1,6 @@
+@import './tokens.css';
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* ===== LIGHT MODE ===== */
-:root {
-  --white: #ffffff;
-  --off-white: #f8f8f6;
-  --light-gray: #f0f0ee;
-  --border: #e4e4e0;
-  --muted: #767672;
-  --text: #1a1a18;
-  --steel: #4a7a9b;
-  --dark: #111110;
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'Inter', system-ui, sans-serif;
-  --ease: 200ms ease;
-  --ease-slow: 350ms ease;
-  --shadow-sm: 0 2px 16px rgba(0, 0, 0, 0.06);
-  --shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* ===== DARK MODE ===== */
-[data-theme="dark"] {
-  --white: #131312;
-  --off-white: #1a1a18;
-  --light-gray: #222220;
-  --border: #2e2e2c;
-  --muted: #888884;
-  --text: #eeeee8;
-  --steel: #6a9bbf;
-  --dark: #080807;
-  --shadow-sm: 0 2px 16px rgba(0, 0, 0, 0.3);
-  --shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
-}
 
 html { scroll-behavior: smooth; }
 
