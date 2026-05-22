@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { PHONE, CONTACT } from './constants'
 import { T } from './i18n'
 import {
-  CallIcon, TextIcon, WhatsAppIcon, InstagramIcon,
-  ArrowIcon, SaveIcon, NfcIcon,
+  CallIcon, TextIcon, WhatsAppIcon, InstagramIcon, GlobeIcon,
+  ArrowIcon, SaveIcon, NfcIcon, SunIcon, MoonIcon,
 } from './components/icons'
 
 function downloadVCard() {
@@ -30,22 +30,29 @@ function downloadVCard() {
 }
 
 const ACTIONS = [
-  { id: 'call',        href: CONTACT.call,             Icon: CallIcon,      external: false, value: null             },
-  { id: 'text',        href: CONTACT.sms,              Icon: TextIcon,      external: false, value: null             },
-  { id: 'whatsapp',    href: CONTACT.whatsapp,         Icon: WhatsAppIcon,  external: true,  value: null             },
-  { id: 'ig-personal', href: CONTACT.instagramPersonal,Icon: InstagramIcon, external: true,  value: '@naza.wav'      },
-  { id: 'ig-studio',   href: CONTACT.instagram,        Icon: InstagramIcon, external: true,  value: '@estudios_roma' },
+  { id: 'call',        href: CONTACT.call,             Icon: CallIcon,      external: false, value: null                  },
+  { id: 'text',        href: CONTACT.sms,              Icon: TextIcon,      external: false, value: null                  },
+  { id: 'whatsapp',    href: CONTACT.whatsapp,         Icon: WhatsAppIcon,  external: true,  value: null                  },
+  { id: 'ig-personal', href: CONTACT.instagramPersonal,Icon: InstagramIcon, external: true,  value: '@naza.wav'           },
+  { id: 'ig-studio',   href: CONTACT.instagram,        Icon: InstagramIcon, external: true,  value: '@estudios_roma'      },
+  { id: 'website',     href: 'https://romarecords.llc',Icon: GlobeIcon,     external: true,  value: 'romarecords.llc'     },
 ]
 
 export default function CardPage() {
   const [lang, setLang] = useState('en')
   const [saved, setSaved] = useState(false)
+  const [dark, setDark] = useState(false)
   const t = T[lang].card
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
+  }, [dark])
 
   const actionLabels = {
     call: t.call, text: t.text, whatsapp: t.whatsapp,
     'ig-personal': t.instagramPersonal,
     'ig-studio': t.instagram,
+    website: t.website,
   }
 
   const handleSave = () => {
@@ -56,13 +63,22 @@ export default function CardPage() {
 
   return (
     <div className="card-page">
-      <button
-        className="card-lang"
-        onClick={() => setLang(v => (v === 'en' ? 'es' : 'en'))}
-        aria-label="Toggle language"
-      >
-        {lang === 'en' ? 'ES' : 'EN'}
-      </button>
+      <div className="card-controls">
+        <button
+          className="card-lang"
+          onClick={() => setLang(v => (v === 'en' ? 'es' : 'en'))}
+          aria-label="Toggle language"
+        >
+          {lang === 'en' ? 'ES' : 'EN'}
+        </button>
+        <button
+          className="card-theme"
+          onClick={() => setDark(v => !v)}
+          aria-label="Toggle dark mode"
+        >
+          {dark ? <SunIcon size={14} /> : <MoonIcon size={14} />}
+        </button>
+      </div>
 
       <div className="card-body">
         <a href="https://romarecords.llc" target="_blank" rel="noopener noreferrer" className="card-logo-wrap">

@@ -13,6 +13,16 @@
   --ease: 200ms ease;
 }
 
+[data-theme="dark"] {
+  --bg: #1c1b1a;
+  --bg2: #252422;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f0f0ec;
+  --muted: rgba(255, 255, 255, 0.45);
+  --steel: #6a9bbf;
+  --steel-dim: rgba(106, 155, 191, 0.15);
+}
+
 html, body, #root {
   height: 100%;
 }
@@ -36,11 +46,18 @@ body {
   background: var(--bg);
 }
 
-/* ===== LANG TOGGLE ===== */
-.card-lang {
+/* ===== CONTROLS (lang + theme) ===== */
+.card-controls {
   position: fixed;
   top: 1.25rem;
   right: 1.25rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 10;
+}
+
+.card-lang,
+.card-theme {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--muted);
@@ -48,13 +65,17 @@ body {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  padding: 0.4rem 0.75rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 2px;
   cursor: pointer;
   transition: var(--ease);
-  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card-lang:hover { color: var(--text); border-color: var(--text); }
+
+.card-lang:hover,
+.card-theme:hover { color: var(--text); border-color: var(--text); }
 
 /* ===== BODY ===== */
 .card-body {
@@ -81,6 +102,10 @@ body {
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.18));
+}
+
+[data-theme="dark"] .card-logo {
+  filter: invert(1) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.08));
 }
 
 /* ===== IDENTITY ===== */
